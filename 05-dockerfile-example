@@ -1,0 +1,24 @@
+Project Structure:
+/my-node-app
+│
+├── Dockerfile
+├── package.json
+├── index.js
+
+index.js
+js
+CopyEdit
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => res.send('Hello from Docker!'));
+app.listen(3000, () => console.log('Server running on port 3000'));
+
+package.json
+json
+CopyEdit
+{
+  "name": "docker-example",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
