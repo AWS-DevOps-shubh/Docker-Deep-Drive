@@ -22,3 +22,26 @@ CopyEdit
     "express": "^4.18.2"
   }
 }
+
+
+
+
+**Dockerfile**
+
+# Step 1: Use official Node.js image as base
+FROM node:18
+
+# Step 2: Set working directory inside container
+WORKDIR /app
+
+# Step 3: Copy files to working directory
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Step 4: Inform Docker which port app uses
+EXPOSE 3000
+
+# Step 5: Start the app
+CMD ["node", "index.js"]
