@@ -1,7 +1,5 @@
 ________________________________________
 📁 Project Structure
-pgsql
-CopyEdit
 my-app/
 ├── docker-compose.yml
 ├── Dockerfile
