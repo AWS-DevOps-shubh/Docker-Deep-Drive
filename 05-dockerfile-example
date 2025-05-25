@@ -22,8 +22,6 @@ package.json
 }
 
 
-
-
 **Dockerfile**
 
 # Step 1: Use official Node.js image as base
