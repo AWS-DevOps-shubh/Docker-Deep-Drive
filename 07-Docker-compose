@@ -62,3 +62,20 @@ ________________________________________
 | `depends_on`     | Define service start order                          |
 | `environment`    | Inject environment variables into the container     |
 
+
+________________________________________
+
+
+📌 **Commands Cheatsheet**
+
+| 🧪 **Command**                            | ⚙️ **Use**                                               |
+|------------------------------------------|----------------------------------------------------------|
+| `docker-compose up`                      | Start all services                                       |
+| `docker-compose up --build`              | Build images and run                                     |
+| `docker-compose down`                    | Stop and remove all containers, networks                 |
+| `docker-compose logs`                    | Show container logs                                      |
+| `docker-compose ps`                      | List running services                                    |
+| `docker-compose exec <service> sh`       | Shell access inside container                            |
+
+
+
