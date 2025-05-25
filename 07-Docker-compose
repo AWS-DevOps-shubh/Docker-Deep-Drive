@@ -1,0 +1,56 @@
+________________________________________
+📁 Project Structure
+pgsql
+CopyEdit
+my-app/
+├── docker-compose.yml
+├── Dockerfile
+├── index.js
+├── package.json
+________________________________________
+🔧 Step 1: Dockerfile
+Dockerfile
+CopyEdit
+FROM node:18
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+CMD ["node", "index.js"]
+________________________________________
+🧾 Step 2: docker-compose.yml
+yaml
+CopyEdit
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - DB_URL=mongodb://mongo:27017/mydb
+
+  mongo:
+    image: mongo:5
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
+________________________________________
+✅ Step 3: Run Everything Together
+bash
+CopyEdit
+docker-compose up --build
+🚀 Ye command 2 containers run karega:
+•	app: Your Node.js application
+•	mongo: A MongoDB database
+________________________________________
