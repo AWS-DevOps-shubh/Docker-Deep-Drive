@@ -49,3 +49,16 @@ docker-compose up --build
 •	app: Your Node.js application
 •	mongo: A MongoDB database
 ________________________________________
+
+🔎 **Breakdown of `docker-compose.yml`**
+
+| 🧩 **Key**        | 📖 **Meaning**                                      |
+|------------------|-----------------------------------------------------|
+| `services`       | All the containers you want to run                  |
+| `build`          | Build from local Dockerfile                         |
+| `image`          | Use official/public image                           |
+| `ports`          | Map local → container ports                         |
+| `volumes`        | Persistent data storage                             |
+| `depends_on`     | Define service start order                          |
+| `environment`    | Inject environment variables into the container     |
+
