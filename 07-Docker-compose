@@ -9,8 +9,7 @@ my-app/
 ├── package.json
 ________________________________________
 🔧 Step 1: Dockerfile
-Dockerfile
-CopyEdit
+
 FROM node:18
 
 WORKDIR /app
@@ -24,8 +23,6 @@ EXPOSE 3000
 CMD ["node", "index.js"]
 ________________________________________
 🧾 Step 2: docker-compose.yml
-yaml
-CopyEdit
 version: '3.8'
 
 services:
@@ -47,8 +44,6 @@ volumes:
   mongo_data:
 ________________________________________
 ✅ Step 3: Run Everything Together
-bash
-CopyEdit
 docker-compose up --build
 🚀 Ye command 2 containers run karega:
 •	app: Your Node.js application
